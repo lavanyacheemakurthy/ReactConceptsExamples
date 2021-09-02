@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { BrowserRouter as Router, NavLink, Switch, Route, useRouteMatch, useHistory, useParams, useLocation } from 'react-router-dom'
 import Child from './Child';
 import PromiseExample from './components/PromiseExample';
+import { ProfilerExample } from './components/ProfilerExample';
 import { UseEffectExample } from './components/UseEffectExample';
 import './App.css';
 
@@ -82,6 +83,7 @@ const App = () => {
           <li><NavLink to={`/nestedRoutesEg`} activeClassName="active">Nested Routes</NavLink></li>
           <li><NavLink to={`/useEffectEg`} activeClassName="active">useEffect</NavLink></li>
           <li><NavLink to={`/promisesEg`} activeClassName="active">Promises</NavLink></li>
+          <li><NavLink to={`/profilerEg`} activeClassName="active">Profiler</NavLink></li>
         </ul>
       </div>
       <Switch>
@@ -160,6 +162,7 @@ const App = () => {
         <Route path='/nestedRoutesEg' ><NestedRouteEg /></Route>
         <Route path='/useEffectEg' ><UseEffectExample /></Route>
         <Route path='/promisesEg' ><div><PromiseExample /></div></Route>
+        <Route path='/profilerEg' ><div><ProfilerExample /></div></Route>
       </Switch>
     </Router>
 
